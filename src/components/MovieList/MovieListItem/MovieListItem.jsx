@@ -2,7 +2,7 @@ import { useLocation, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import css from './MovieListItem.module.css';
 
-const MovieListItem = ({ id, title }) => {
+export const MovieListItem = ({ id, title }) => {
   const location = useLocation();
 
   return (
@@ -22,4 +22,3 @@ MovieListItem.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
 };
-export default MovieListItem;

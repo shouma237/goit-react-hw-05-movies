@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovieCast } from '../../services/themoviedb-api';
 import css from './CastList.module.css';
-import CastListItem from './CastListItem/CastListItem';
+import { CastListItem } from './CastListItem/CastListItem';
 
 const CastList = () => {
   const { movieId } = useParams();

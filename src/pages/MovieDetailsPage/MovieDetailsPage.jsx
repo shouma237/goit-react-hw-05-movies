@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef, Suspense } from 'react';
+import { useEffect, useState, useRef, Suspense } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { fetchMovieDetails } from '../../services/themoviedb-api';
-import Button from 'components/Button/Button';
+import { Button } from 'components/Button/Button';
 import { Loader } from 'components/Loader/Loader';
 import css from './MovieDetailsPage.module.css';
 

@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import css from './MovieList.module.css';
-import MovieListItem from './MovieListItem/MovieListItem';
+import { MovieListItem } from './MovieListItem/MovieListItem';
 
-const MovieList = ({ movies }) => {
+export const MovieList = ({ movies }) => {
   return (
     <ul className={css.movieList}>
       {movies.map(({ id, title }) => (
@@ -20,5 +20,3 @@ MovieList.propTypes = {
     })
   ),
 };
-
-export default MovieList;
