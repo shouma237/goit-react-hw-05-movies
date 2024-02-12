@@ -9,12 +9,12 @@ const HomePage = () => {
   useEffect(() => {
     (async () => {
       try {
-        const movies = await fetchTrendingMovies(); // Call the fetchTrendingMovies function
-        setTrendingMovies(movies); // Update the trendingMovies state with the fetched movies
+        const movies = await fetchTrendingMovies();
+        setTrendingMovies(movies);
       } catch (error) {
         console.error(error);
       }
-    })(); // Call the fetchData function to fetch the trending movies
+    })();
   }, []);
 
   return (
