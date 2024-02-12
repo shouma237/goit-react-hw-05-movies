@@ -13,16 +13,16 @@
   }
 }
 
-.links {
+.link {
   padding: 8px 16px;
   border-radius: 4px;
   text-decoration: none;
   color: black;
   font-weight: 500;
+}
 
-  &:active,
-  &:focus {
-    color: white;
-    background-color: #ff3700;
-  }
+.linkActive {
+  composes: link;
+  color: orangered;
+  font-weight: 800;
 }

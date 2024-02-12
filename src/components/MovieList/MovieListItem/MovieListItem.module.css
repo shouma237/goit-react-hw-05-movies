@@ -11,6 +11,6 @@
 
   &:hover,
   &:focus {
-    color: #ff3700;
+    color: orangered;
   }
 }
