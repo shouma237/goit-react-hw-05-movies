@@ -3,7 +3,7 @@ import axios from 'axios';
 // PLEASE USE YOUR OWN API KEY HERE
 const API_KEY = '9f83c5097d4c9aeee6c8b72b3b142cd0';
 
-axios.defaults.baseURL = 'https://api.themoviedb.org/3';
+axios.defaults.baseURL = 'https://api.themoviedb.org/3/';
 axios.defaults.params = {
   api_key: API_KEY,
 };
@@ -16,13 +16,13 @@ export const fetchTrendingMovies = async () => {
 
 // REFERENCE: https://developer.themoviedb.org/reference/search-movie
 export const fetchMovieByQuery = async movieName => {
-  const response = await axios.get(`/search/movie?query=${movieName}`);
+  const response = await axios.get(`search/movie?query=${movieName}`);
   return response.data.results;
 };
 
 // REFERENCE: https://developer.themoviedb.org/reference/movie-details
 export const fetchMovieDetails = async movieId => {
-  const response = await axios.get(`/movie/${movieId}`);
+  const response = await axios.get(`movie/${movieId}`);
   return response.data;
 };
 
