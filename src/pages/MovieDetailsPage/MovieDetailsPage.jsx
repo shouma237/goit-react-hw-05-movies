@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef, Suspense } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useParams, Link, Outlet, useLocation } from 'react-router-dom';
 import { fetchMovieDetails } from '../../services/themoviedb-api';
 import { Button } from 'components/Button/Button';
@@ -9,7 +9,7 @@ const MovieDetailsPage = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState();
   const location = useLocation();
-  const backLinkHref = useRef(location.state?.from || '/');
+  const backLinkHref = location.state?.from ?? '/';
 
   useEffect(() => {
     (async () => {
@@ -28,7 +28,7 @@ const MovieDetailsPage = () => {
 
   return (
     <>
-      <Link to={backLinkHref.current}>
+      <Link to={backLinkHref}>
         <Button text="⬅ Go back" />
       </Link>
 
