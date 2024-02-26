@@ -1,4 +1,4 @@
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import css from './SearchBar.module.css';
 import { HiSearch } from 'react-icons/hi';
 import { DebounceInput } from 'react-debounce-input';
@@ -25,6 +25,6 @@ export const SearchBar = ({ onChange, value }) => {
 };
 
 SearchBar.propTypes = {
-  value: propTypes.string,
-  onChange: propTypes.func,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
 };
